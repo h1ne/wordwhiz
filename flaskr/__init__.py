@@ -2,6 +2,9 @@ import os
 
 from flask import Flask
 from flask import render_template
+from flask import request
+
+STATUS = " "
 
 def create_app(test_config=None):
     # create and configure the app
@@ -35,6 +38,8 @@ def create_app(test_config=None):
 
     @app.route('/levelselection', methods=['POST'])
     def levelselection():
+        prev_url = request.referrer
+        print("Previous URL : " + prev_url)
         return render_template('levelselection.html')
 
     @app.route('/wordlist', methods=['POST'])
