@@ -1,16 +1,16 @@
 import os
 
 from flask import Flask
-
+from flask import render_template
 
 def create_app(test_config=None):
     # create and configure the app
     app = Flask(__name__, instance_relative_config=True)
-    app.config.from_mapping(
-        SECRET_KEY='dev',
-        # SECRET_KEY = os.urandom(24),
-        DATABASE=os.path.join(app.instance_path, 'flaskr.sqlite'),
-    )
+    # app.config.from_mapping(
+    #     SECRET_KEY='dev',
+    #     SECRET_KEY = os.urandom(24),
+    #     DATABASE=os.path.join(app.instance_path, 'flaskr.sqlite'),
+    # )
 
     if test_config is None:
         # load the instance config, if it exists, when not testing
@@ -25,8 +25,20 @@ def create_app(test_config=None):
     except OSError:
         pass
 
-    @app.route('/hello')
-    def hello():
-        return 'Hello, World!'
+    @app.route('/')
+    def mainmenu():
+        return render_template('mainmenu.html')
+
+    @app.route('/quiz', methods=['POST'])
+    def quiz():
+        return render_template('quiz.html')
+
+    @app.route('/levelselection', methods=['POST'])
+    def levelselection():
+        return render_template('levelselection.html')
+
+    @app.route('/wordlist', methods=['POST'])
+    def wordlist():
+        return render_template('wordlist.html')
 
     return app
