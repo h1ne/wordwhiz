@@ -36,11 +36,9 @@ def create_app(test_config=None):
     def quiz():
         return render_template('quiz.html')
 
-    @app.route('/levelselection', methods=['POST'])
+    @app.route('/materials', methods=['POST'])
     def levelselection():
-        prev_url = request.referrer
-        print("Previous URL : " + prev_url)
-        return render_template('levelselection.html')
+        return render_template('materials.html')
 
     @app.route('/wordlist', methods=['POST'])
     def wordlist():
