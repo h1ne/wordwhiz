@@ -34,6 +34,8 @@ def create_app(test_config=None):
 
     @app.route('/materials', methods=['POST'])
     def materials():
+        STATUS = request.form['button'] # quiz or word_list
+        print("STATUS = " + STATUS)
         return render_template('materials.html')
 
     @app.route('/quiz', methods=['POST'])

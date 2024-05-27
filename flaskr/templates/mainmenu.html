@@ -8,12 +8,20 @@
 </head>
 <body>
     <div class="container">
-        <div class="title">MATERIALS</div>
+        <div class="title">WORDWHIZ</div>
         <div class="button-container">
+            <!-- <form action="{{ url_for('materials') }}" method="post"> -->
+            <!--     <button class="button" type="submit">QUIZ</button> -->
+            <!-- </form> -->
+            <!-- <form action="{{ url_for('materials') }}" method="post"> -->
+            <!--     <button class="button" type="submit">WORD LIST</button> -->
+            <!-- </form> -->
             <form action="{{ url_for('materials') }}" method="post">
+                <input type="hidden" name="button" value="quiz">
                 <button class="button" type="submit">QUIZ</button>
             </form>
             <form action="{{ url_for('materials') }}" method="post">
+                <input type="hidden" name="button" value="word_list">
                 <button class="button" type="submit">WORD LIST</button>
             </form>
         </div>
