@@ -3,19 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WordWhiz</title>
-    <link rel="stylesheet" href="../static/style.css">
+    <title>Materials</title>
+    <link rel="stylesheet" href="../static/levelselection.css">
 </head>
 <body>
     <div class="container">
-        <div class="title">WORDWHIZ</div>
-        <div class="button-container">
-            <form action="{{ url_for('levelselection') }}" method="post">
-                <button class="button" type="submit">QUIZ</button>
-            </form>
-            <form action="{{ url_for('levelselection') }}" method="post">
-                <button class="button" type="submit">WORD LIST</button>
-            </form>
+        <div class="title">MATERIALS</div>
+        <div class="button-grid">
+            <button class="button">英検1級</button>
+            <button class="button">英検準1級</button>
+            <button class="button">TOEIC990</button>
+            <button class="button">実用英単語</button>
         </div>
     </div>
 </body>
