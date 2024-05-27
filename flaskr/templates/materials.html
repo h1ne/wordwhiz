@@ -11,15 +11,23 @@
         <div class="title">MATERIALS</div>
         <div class="button-grid">
             <form action="{{ url_for('materials') }}" method="post">
+                <input type="hidden" name="material_status" value="eiken-1">
+                <input type="hidden" name="prev-status" value="materials">
                 <button class="button" type="submit">英検１級</button>
             </form>
             <form action="{{ url_for('materials') }}" method="post">
+                <input type="hidden" name="material_status" value="eiken-pre1">
+                <input type="hidden" name="prev-status" value="materials">
                 <button class="button" type="submit">英検準１級</button>
             </form>
             <form action="{{ url_for('materials') }}" method="post">
+                <input type="hidden" name="material_status" value="toeic-990">
+                <input type="hidden" name="prev-status" value="materials">
                 <button class="button" type="submit">TOEIC990</button>
             </form>
             <form action="{{ url_for('materials') }}" method="post">
+                <input type="hidden" name="material_status" value="practical-words">
+                <input type="hidden" name="prev-status" value="materials">
                 <button class="button" type="submit">実用英単語</button>
             </form>
         </div>

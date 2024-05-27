@@ -18,10 +18,12 @@
             <!-- </form> -->
             <form action="{{ url_for('materials') }}" method="post">
                 <input type="hidden" name="button" value="quiz">
+                <input type="hidden" name="prev-status" value="mainmenu">
                 <button class="button" type="submit">QUIZ</button>
             </form>
             <form action="{{ url_for('materials') }}" method="post">
                 <input type="hidden" name="button" value="word_list">
+                <input type="hidden" name="prev-status" value="mainmenu">
                 <button class="button" type="submit">WORD LIST</button>
             </form>
         </div>

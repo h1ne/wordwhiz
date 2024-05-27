@@ -35,8 +35,18 @@ def create_app(test_config=None):
     @app.route('/materials', methods=['POST'])
     def materials():
         STATUS = request.form['button'] # quiz or word_list
-        print("STATUS = " + STATUS)
-        return render_template('materials.html')
+        PREV_STATUS = request.form['prev-status']
+        MATERIAL_STATUS = request.form['material_status']
+        print("STATUS           = " + STATUS)
+        print("PREV_STATUS      = " + PREV_STATUS)
+        print("MATERIAL_STATUS  = " + MATERIAL_STATUS)
+        if PREV_STATUS == "mainmenu":
+            return render_template('materials.html')
+        elif PREV_STATUS == "materials":
+            if STATUS == quiz:
+                return render_template('quiz.html')
+            elif STATUS == word_list:
+                return render_template('wordlist.html')
 
     @app.route('/quiz', methods=['POST'])
     def quiz():
