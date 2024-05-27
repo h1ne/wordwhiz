@@ -3,21 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WordWhiz</title>
-    <link rel="stylesheet" href="../static/style.css">
+    <title>WORDWHIZ</title>
+    <link rel="stylesheet" href="../static/mainmenu.css">
 </head>
 <body>
     <div class="container">
         <div class="title">MATERIALS</div>
-        <div class="button-container">
-            <form action="{{ url_for('quiz') }}" method="post">
-                <button class="button" type="submit">QUIZ</button>
+        <div class="button-grid">
+            <form action="{{ url_for('materials') }}" method="post">
+                <button class="button" type="submit">英検１級</button>
             </form>
-            <form action="{{ url_for('wordlist') }}" method="post">
-                <button class="button" type="submit">WORD LIST</button>
+            <form action="{{ url_for('materials') }}" method="post">
+                <button class="button" type="submit">英検準１級</button>
+            </form>
+            <form action="{{ url_for('materials') }}" method="post">
+                <button class="button" type="submit">TOEIC990</button>
+            </form>
+            <form action="{{ url_for('materials') }}" method="post">
+                <button class="button" type="submit">実用英単語</button>
             </form>
         </div>
     </div>
 </body>
-</html>
-
