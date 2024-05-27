@@ -32,13 +32,13 @@ def create_app(test_config=None):
     def mainmenu():
         return render_template('mainmenu.html')
 
+    @app.route('/materials', methods=['POST'])
+    def materials():
+        return render_template('materials.html')
+
     @app.route('/quiz', methods=['POST'])
     def quiz():
         return render_template('quiz.html')
-
-    @app.route('/materials', methods=['POST'])
-    def levelselection():
-        return render_template('materials.html')
 
     @app.route('/wordlist', methods=['POST'])
     def wordlist():
