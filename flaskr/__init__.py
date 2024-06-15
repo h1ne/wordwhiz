@@ -58,4 +58,8 @@ def create_app(test_config=None):
     def wordlist():
         return render_template('wordlist.html')
 
+    # @app.route('back', methods=['POST'])
+    # def back():
+    #     PREV_STATUS = request.form['prev-status']
+
     return app
