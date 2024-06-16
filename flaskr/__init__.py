@@ -52,6 +52,7 @@ def create_app(test_config=None):
 
     @app.route('/quiz', methods=['POST'])
     def quiz():
+        # MATERIAL_STATUS = request.from['material_status']
         return render_template('quiz.html')
 
     @app.route('/wordlist', methods=['POST'])
